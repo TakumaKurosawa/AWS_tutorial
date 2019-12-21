@@ -1,7 +1,7 @@
 # linux #
 INSTALL_GO = wget https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz
+CHOWN_EC2 = sudo chmod -R 600 /usr/local
 TAR_GO = tar -C /usr/local -xzf ~/AWS_tutorial/go1.8.3.linux-amd64.tar.gz
-CHOWN_EC2 = sudo chmod -R 600 /usr/local/go/bin
 SET_MODULE_ON = export GO111MODULE=on
 SET_GO_PATH = export PATH=$$PATH:/usr/local/go/bin
 
@@ -44,8 +44,8 @@ api_dev: ## apiサーバをローカル環境で動かす
 
 api_deploy: ## apiサーバを本番環境（Linux）で動かす
 	$(INSTALL_GO)
-	$(TAR_GO)
 	$(CHOWN_EC2)
+	$(TAR_GO)
 	$(SET_GO_PATH)
 	$(SET_MODULE_ON)
 	$(GO_BUILD_DEPLOY)
