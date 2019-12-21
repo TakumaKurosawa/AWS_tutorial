@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+    api_server:
+        build:
+            context: ./server/
+        command: ./binary/api
+        ports:
+          - "8080:8080"
+
+    client:
+        build:
+            context: ./client/
+        command: yarn start
+        depends_on:
+            - api_server
+        ports:
+          - "3000:3000"

@@ -8,7 +8,7 @@
 <script>
 export default {
   async asyncData({ app }) {
-    const res = await app.$axios.get('http://localhost:8080/ping')
+    const res = await app.$axios.get('http://api_server:8080/ping')
     return {
       msg: res.data
     }
