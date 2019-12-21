@@ -1,8 +1,8 @@
 package main
 
 import (
-	"./db"
-	"./db/model"
+	"awstutorial/db"
+	"awstutorial/db/Model"
 	"github.com/gin-gonic/gin"
 )
 

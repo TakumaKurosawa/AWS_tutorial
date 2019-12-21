@@ -1,7 +1,7 @@
 package db
 
 import (
-	"./model"
+	"awstutorial/db/Model"
 	"fmt"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
@@ -14,7 +14,7 @@ func GormCreate() *gorm.DB {
 	USER := "root"
 	PASS := "hoge9630"
 	PROTOCOL := "tcp(" + ip + ":3306)"
-	DBNAME := "orenotorero"
+	DBNAME := "hoge"
 	CONNECT := USER + ":" + PASS + "@" + PROTOCOL + "/" + DBNAME
 
 	db, err := gorm.Open(DBMS, CONNECT)
