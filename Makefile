@@ -1,6 +1,6 @@
 # linux #
 INSTALL_GO = wget https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz
-TAR_GO = tar -C /usr/local -xzf ~/go1.8.3.linux-amd64.tar.gz
+TAR_GO = tar -C /usr/local -xzf ~/AWS_tutorial/go1.8.3.linux-amd64.tar.gz
 SET_MODULE_ON = export GO111MODULE=on
 SET_GO_PATH = export PATH=$$PATH:/usr/local/go/bin
 
